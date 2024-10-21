@@ -183,6 +183,7 @@ let hasStudentWithName = (name) => {
       return "student not found";
     }
 };
+
 //console.log(hasStudentWithName('Alice Johnson')); 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////29
 let getNamesOfAllStudents = () => {
