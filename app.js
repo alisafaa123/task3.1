@@ -183,7 +183,6 @@ let hasStudentWithName = (name) => {
       return "student not found";
     }
 };
-
 //console.log(hasStudentWithName('Alice Johnson')); 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////29
 let getNamesOfAllStudents = () => {
@@ -194,24 +193,28 @@ let getNamesOfAllStudents = () => {
 let getAllStudentIds = () => {
   return students.map(student => student.id);
 };
-console.log(getAllStudentIds());
-/*
+//console.log(getAllStudentIds());
+//////////////////////////////////////////////////////////////////////////////////////////////////////////31
 let getAllStudentStages = () => {
-  //TODO:
+  return students.map(student => student.stage);
 };
-
+//console.log(getAllStudentStages());
+//////////////////////////////////////////////////////////////////////////////////////////////////////////32
 let getStudentsWithNamesStartingWith = (letter) => {
-  //TODO:
+    return students.filter(stu => stu.name[0] === letter);
 };
-
+//console.log(getStudentsWithNamesStartingWith('E'));
+//////////////////////////////////////////////////////////////////////////////////////////////////////////33
 let getStudentsWithNamesEndingWith = (letter) => {
-  //TODO:
+  return students.filter(stu => stu.name[stu.name.length -1] === letter);
 };
-
+//console.log(getStudentsWithNamesEndingWith('s'));
+//////////////////////////////////////////////////////////////////////////////////////////////////////////34
 let getStudentsWithNameLengthGreaterThan = (length) => {
-  //TODO:
+  return students.filter(stu => stu.name.length > length);
 };
-
+//console.log(getStudentsWithNameLengthGreaterThan(12));
+/*
 let getStudentsWithNameLengthLessThan = (length) => {
   //TODO:
 };
