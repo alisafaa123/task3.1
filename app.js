@@ -277,15 +277,17 @@ let countStudentsBelowAge = (age) => {
 };
 //console.log(countStudentsBelowAge(16));
 //////////////////////////////////////////////////////////////////////////////////////////////////////////44
-/*
 let addMultipleStudents = (newStudents) => {
-  //TODO:
+     students.push(...newStudents);
+     return students ;
 };
-
+//console.log(addMultipleStudents([{id: 21,name: "ali",stage: "Grade 11",age: 26},{id: 22,name: "safaa",stage: "Grade 11",age: 46}]));
+//////////////////////////////////////////////////////////////////////////////////////////////////////////45
 let removeMultipleStudentsById = (ids) => {
-  //TODO:
-};
-
+  return students.filter(student => !ids.includes(student.id));
+}
+//console.log(removeMultipleStudentsById([2, 3,5,13,15,6,20])); 
+/*
 let updateMultipleStudentsById = (ids, updatedData) => {
   //TODO:
 };
