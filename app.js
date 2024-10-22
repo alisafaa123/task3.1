@@ -252,23 +252,32 @@ let getRandomStudent = (age) => {
 };
 //console.log(getRandomStudent(16));
 //////////////////////////////////////////////////////////////////////////////////////////////////////////40
-
 let removeStudentsBelowAge = (age) => {
-  //TODO:
+  students = students.filter(student => student.age > age);
+  return students;
 };
-/*
+//console.log(removeStudentsBelowAge(16));
+//////////////////////////////////////////////////////////////////////////////////////////////////////////41
 let getStudentsBetweenAges = (minAge, maxAge) => {
-  //TODO:
+  return students.filter(student => student.age > minAge && student.age < maxAge);
 };
-
+//console.log(getStudentsBetweenAges(12 , 17));
+//////////////////////////////////////////////////////////////////////////////////////////////////////////42
 let countStudentsAboveAge = (age) => {
-  //TODO:
+  return students.reduce((count, student) => {
+    return student.age > age ? count + 1 : count;
+  }, 0);
 };
-
+//console.log(countStudentsAboveAge(16));
+//////////////////////////////////////////////////////////////////////////////////////////////////////////43
 let countStudentsBelowAge = (age) => {
-  //TODO:
+  return students.reduce((Count , student)=> {
+    return student.age < age ? Count + 1 : Count;
+  } , 0);
 };
-
+//console.log(countStudentsBelowAge(16));
+//////////////////////////////////////////////////////////////////////////////////////////////////////////44
+/*
 let addMultipleStudents = (newStudents) => {
   //TODO:
 };
