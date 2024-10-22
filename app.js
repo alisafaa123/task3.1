@@ -214,31 +214,49 @@ let getStudentsWithNameLengthGreaterThan = (length) => {
   return students.filter(stu => stu.name.length > length);
 };
 //console.log(getStudentsWithNameLengthGreaterThan(12));
-/*
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////35
 let getStudentsWithNameLengthLessThan = (length) => {
-  //TODO:
+  return students.filter(stu => stu.name.length < length);
 };
-
+//console.log(getStudentsWithNameLengthLessThan(10));
+//////////////////////////////////////////////////////////////////////////////////////////////////////////36
 let getAllStudentsSortedById = () => {
-  //TODO:
+  return students.sort((a, b) => {
+    if (a.id < b.id) return -1; 
+    if (a.id > b.id) return 1;
+    return 0;
+  });
 };
-
+//console.log(getAllStudentsSortedById());
+//////////////////////////////////////////////////////////////////////////////////////////////////////////37
 let reverseStudentList = () => {
-  //TODO:
+  let reversed = [];
+  for (let i = students.length - 1; i >= 0; i--) {
+    reversed.push(students[i]);
+  }
+  return reversed;
 };
-
-let getRandomStudent = () => {
-  //TODO:
+//console.log(reverseStudentList());
+//////////////////////////////////////////////////////////////////////////////////////////////////////////38
+// let getRandomStudent = () => {
+//   const randomIndex = Math.floor(Math.random() * students.length);
+//   return students[randomIndex];
+// };
+// console.log(getRandomStudent());
+//////////////////////////////////////////////////////////////////////////////////////////////////////////39
+let getRandomStudent = (age) => {
+  const stu = students.filter(student => student.age === age)
+  const randomIndex = Math.floor(Math.random() * stu.length);
+  return stu[randomIndex];
 };
-
-let removeStudentsAboveAge = (age) => {
-  //TODO:
-};
+//console.log(getRandomStudent(16));
+//////////////////////////////////////////////////////////////////////////////////////////////////////////40
 
 let removeStudentsBelowAge = (age) => {
   //TODO:
 };
-
+/*
 let getStudentsBetweenAges = (minAge, maxAge) => {
   //TODO:
 };
