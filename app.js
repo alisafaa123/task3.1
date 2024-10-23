@@ -303,9 +303,13 @@ let isAllStudentsBelowAge = (age) => {
 //console.log(isAllStudentsBelowAge(14)); 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////49
 let hasStudentsInStage = (stage) => {
-  //TODO:
+  return  students.some(student => student.stage === stage);
 };
+//console.log(hasStudentsInStage("Grade 11")); 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////50
 let getStudentNamesWithIds = (ids) => {
-  //TODO:
+  return students.filter(student => ids.includes(student.id)).map(student => student.name);
 };
+//console.log(getStudentNamesWithIds([3,6,8])); 
+
+
